@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+    <head>
+        <title>Minisearch</title>
+    </head>
+    <body>
+ 	<h3>Advanced Search</h3>
+    	<div>
+    		<form action="/results/" method="get">
+			You were searching for: <br/>
+			<input type="text" name="input" value="{{ input }}" size="100"/><br/>
+					
+			<b>Search path:</b><input type="text" name="path" value="{{ path }}" size="50" /><br/>
+			
+					<b>Seed page:</b> <input type="text" name="site" value="{{ site }}" size="50" />
+			<br/>
+			You can change your input data in the fields above and press this button to search again:
+			<input type="submit" value="Submit" />
+					
+     		</form> 
+     	</div>
+         <h4>Results:</h4>
+	You got {{ total }} results	
+<br/>
+		{%for link, value in links.items %}
+
+<a href ="{{ link }}">{{ link }}</a> - occurrences on that page: {{ value }} 
+<br/>
+{% endfor %}
+</br>
+    </body>
+</html>
