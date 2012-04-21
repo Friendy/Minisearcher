@@ -14,7 +14,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'minisearch_db',                      # Or path to tabase file if using sqlite3.
         'USER': 'minisearch',                      # Not used with sqlite3.
-        'PASSWORD': 'alwfrida',                  # Not used with sqlite3.
+       
+        'PASSWORD': '',                  # Not used with sqlite3.
+
         'HOST': 'msql1.alwaysdata.com',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
